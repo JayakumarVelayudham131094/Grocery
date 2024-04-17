@@ -5,6 +5,7 @@ import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import com.google.common.truth.Truth
 import com.product.groceryapplication.MainCoroutineRule
 import com.product.groceryapplication.ui.cart.CartViewModel
+import io.mockk.mockk
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.launch
 import org.junit.Before
@@ -25,6 +26,7 @@ class CartViewModelTest {
 
     @Before
     fun setUp() {
+        viewModel = mockk()
         viewModel = CartViewModel(application)
     }
 

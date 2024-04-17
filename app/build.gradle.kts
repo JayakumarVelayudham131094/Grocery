@@ -101,4 +101,9 @@ dependencies {
     implementation("androidx.compose.runtime:runtime-livedata:1.6.4")
 
 
+    //Mock K
+    testImplementation ("io.mockk:mockk:1.13.10")
+    androidTestImplementation ("io.mockk:mockk:1.13.10")
+
+
 }

@@ -6,6 +6,7 @@ import com.google.common.truth.Truth
 import com.product.groceryapplication.data.model.Product
 import com.product.groceryapplication.data.model.ProductResponse
 import com.product.groceryapplication.ui.productlist.ProductViewModel
+import io.mockk.mockk
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.runBlocking
@@ -27,6 +28,7 @@ class ProductViewModelTest {
 
     @Before
     fun setUp() {
+        viewModel = mockk()
         viewModel = ProductViewModel(application)
     }
 

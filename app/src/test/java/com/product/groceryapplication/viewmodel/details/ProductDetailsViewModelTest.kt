@@ -5,6 +5,7 @@ import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import com.google.common.truth.Truth
 import com.product.groceryapplication.MainCoroutineRule
 import com.product.groceryapplication.ui.details.ProductDetailsViewModel
+import io.mockk.mockk
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.launch
 import org.junit.Before
@@ -26,6 +27,7 @@ class ProductDetailsViewModelTest {
 
     @Before
     fun setUp() {
+        viewModel = mockk()
         viewModel = ProductDetailsViewModel(application)
     }
 
